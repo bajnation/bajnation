@@ -28,15 +28,8 @@
       --shadow: 0 10px 30px rgba(10, 77, 92, 0.12);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -49,355 +42,208 @@
       font-family: 'Hunterra', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
 
     /* Header */
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(248, 246, 241, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(10, 77, 92, 0.08);
-      transition: background 0.3s ease;
     }
-
     .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.85rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1100px; margin: 0 auto; padding: 0.85rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
     }
-
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo-link img {
-      height: 48px;
-      width: auto;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--teal);
-      letter-spacing: 0.02em;
-    }
-
-    .logo-text span {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.75rem;
-    }
-
-    nav a {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text);
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--orange);
-    }
+    .logo-link { display: flex; align-items: center; gap: 0.75rem; }
+    .logo-link img { height: 48px; width: auto; }
+    .logo-text { font-weight: 700; font-size: 1.15rem; color: var(--teal); letter-spacing: 0.02em; }
+    .logo-text span { display: block; font-size: 0.7rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.04em; }
+    nav { display: flex; gap: 1.75rem; }
+    nav a { font-size: 0.95rem; font-weight: 500; color: var(--text); transition: color 0.2s; }
+    nav a:hover { color: var(--orange); }
 
     /* Hero */
     .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--white);
-      overflow: hidden;
+      position: relative; min-height: 92vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; color: var(--white); overflow: hidden;
     }
-
     .hero-bg {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: url('images/hero-tetons.jpg') center/cover no-repeat;
       transform: scale(1.02);
     }
-
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(7, 53, 64, 0.55) 0%,
-        rgba(7, 53, 64, 0.35) 40%,
-        rgba(7, 53, 64, 0.7) 100%
-      );
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(7,53,64,0.55) 0%, rgba(7,53,64,0.35) 40%, rgba(7,53,64,0.7) 100%);
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem 1.5rem;
-      max-width: 800px;
-    }
-
-    .hero-logo {
-      width: 160px;
-      margin: 0 auto 1.5rem;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
-    }
-
+    .hero-content { position: relative; z-index: 2; padding: 2rem 1.5rem; max-width: 800px; }
+    .hero-logo { width: 160px; margin: 0 auto 1.5rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35)); }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.1rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
+      font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 0.6rem;
       text-shadow: 0 2px 12px rgba(0,0,0,0.4);
     }
-
     .hero .tagline {
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      font-weight: 400;
-      opacity: 0.95;
-      margin-bottom: 1.25rem;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem); font-weight: 400;
+      opacity: 0.95; margin-bottom: 1.25rem;
       text-shadow: 0 1px 6px rgba(0,0,0,0.35);
     }
-
     .hero .est {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      background: rgba(232, 93, 4, 0.9);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
+      display: inline-block; font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      background: rgba(232, 93, 4, 0.9); padding: 0.4rem 1rem; border-radius: 999px;
     }
 
     /* Sections */
-    section {
-      padding: 5rem 1.5rem;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; }
     .section-title {
-      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-      font-weight: 700;
-      color: var(--teal);
-      text-align: center;
-      margin-bottom: 0.5rem;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem); font-weight: 700;
+      color: var(--teal); text-align: center; margin-bottom: 0.5rem;
     }
-
     .section-sub {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      font-size: 1.05rem;
+      text-align: center; color: var(--text-muted);
+      margin-bottom: 2.5rem; font-size: 1.05rem;
     }
 
     /* About */
-    #about {
-      background: var(--white);
-    }
-
+    #about { background: var(--white); }
     .about-card {
-      background: var(--cream);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(10, 77, 92, 0.06);
+      background: var(--cream); border-radius: 16px; padding: 2.5rem 2rem;
+      box-shadow: var(--shadow); border: 1px solid rgba(10, 77, 92, 0.06);
     }
-
-    .about-card p {
-      font-size: 1.1rem;
-      color: var(--text);
-      margin-bottom: 1.25rem;
-    }
-
-    .about-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .mission-highlight {
-      font-weight: 600;
-      color: var(--teal);
-    }
+    .about-card p { font-size: 1.1rem; color: var(--text); margin-bottom: 1.25rem; }
+    .about-card p:last-child { margin-bottom: 0; }
+    .mission-highlight { font-weight: 600; color: var(--teal); }
 
     /* Gallery */
-    #community {
-      background: var(--light-gray);
-    }
-
+    #community { background: var(--light-gray); }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;
     }
-
     .gallery-item {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      aspect-ratio: 4/3;
-      position: relative;
+      border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);
+      aspect-ratio: 4/3; position: relative;
     }
-
     .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
+      width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
     }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(to top, rgba(7,53,64,0.85), transparent);
+      color: white; font-size: 0.85rem; font-weight: 500;
+    }
+
+    /* Shop - Full width image style */
+    #shop {
+      background: var(--white);
+      padding: 0;
+    }
+    .shop-banner {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .shop-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 480px;
+      object-fit: cover;
+    }
+    .shop-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 0.75rem 1rem;
-      background: linear-gradient(to top, rgba(7,53,64,0.85), transparent);
+      padding: 2.5rem 1.5rem;
+      background: linear-gradient(to top, rgba(7,53,64,0.88) 0%, rgba(7,53,64,0.55) 60%, transparent 100%);
       color: white;
-      font-size: 0.85rem;
-      font-weight: 500;
+      text-align: center;
+    }
+    .shop-overlay h2 {
+      font-family: 'Hunterra', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin-bottom: 0.4rem;
+      color: white;
+    }
+    .shop-overlay p {
+      font-size: 1.05rem;
+      opacity: 0.95;
+      margin-bottom: 1.25rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .shop-btn {
+      display: inline-flex;
+      align-items: center;
+      background: var(--orange);
+      color: white;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+    }
+    .shop-btn:hover {
+      background: var(--orange-soft);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(232, 93, 4, 0.35);
     }
 
     /* Connect */
-    #connect {
-      background: var(--teal);
-      color: var(--white);
-      text-align: center;
-    }
-
-    #connect .section-title {
-      color: var(--white);
-    }
-
-    #connect .section-sub {
-      color: rgba(255,255,255,0.85);
-    }
-
+    #connect { background: var(--teal); color: var(--white); text-align: center; }
+    #connect .section-title { color: var(--white); }
+    #connect .section-sub { color: rgba(255,255,255,0.85); }
     .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1rem; margin-top: 1.5rem;
     }
-
     .social-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      color: white;
-      padding: 0.85rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.25s ease;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+      color: white; padding: 0.85rem 1.5rem; border-radius: 999px;
+      font-weight: 600; font-size: 0.95rem; transition: all 0.25s ease;
     }
-
     .social-btn:hover {
-      background: var(--orange);
-      border-color: var(--orange);
-      transform: translateY(-2px);
+      background: var(--orange); border-color: var(--orange); transform: translateY(-2px);
     }
-
-    .social-btn svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
+    .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
 
     /* Footer */
     footer {
-      background: var(--teal-dark);
-      color: rgba(255,255,255,0.75);
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      font-size: 0.9rem;
+      background: var(--teal-dark); color: rgba(255,255,255,0.75);
+      text-align: center; padding: 2.5rem 1.5rem; font-size: 0.9rem;
     }
-
-    footer .footer-logo {
-      width: 70px;
-      margin: 0 auto 1rem;
-      opacity: 0.9;
-    }
-
-    footer p {
-      margin-bottom: 0.4rem;
-    }
-
-    footer .legal {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
+    footer .footer-logo { width: 70px; margin: 0 auto 1rem; opacity: 0.9; }
+    footer p { margin-bottom: 0.4rem; }
+    footer .legal { margin-top: 1rem; font-size: 0.8rem; opacity: 0.7; }
 
     /* Mobile */
     @media (max-width: 700px) {
-      .logo-text {
-        display: none;
-      }
-
-      nav {
-        gap: 1.1rem;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        min-height: 85vh;
-      }
-
-      .hero-logo {
-        width: 120px;
-      }
-
-      section {
-        padding: 3.5rem 1.25rem;
-      }
-
-      .about-card {
-        padding: 1.75rem 1.25rem;
-      }
+      .logo-text { display: none; }
+      nav { gap: 1.1rem; }
+      nav a { font-size: 0.9rem; }
+      .hero { min-height: 85vh; }
+      .hero-logo { width: 120px; }
+      section { padding: 3.5rem 1.25rem; }
+      .about-card { padding: 1.75rem 1.25rem; }
+      .shop-overlay { padding: 1.75rem 1.25rem; }
+      .shop-banner img { max-height: 360px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="header-inner">
       <a href="#" class="logo-link">
@@ -416,7 +262,6 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
@@ -428,7 +273,6 @@
     </div>
   </section>
 
-  <!-- About -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">Who We Are</h2>
@@ -449,7 +293,6 @@
     </div>
   </section>
 
-  <!-- Community / Gallery -->
   <section id="community">
     <div class="container">
       <h2 class="section-title">On the Trail</h2>
@@ -483,39 +326,20 @@
     </div>
   </section>
 
-  <!-- Shop -->
-<section id="shop" style="background: var(--white);">
-  <div class="container">
-    <h2 class="section-title">BAJ Merch</h2>
-    <p class="section-sub">Official gear for the community</p>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; max-width: 900px; margin: 0 auto;">
-      
-      <!-- Image -->
-      <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);">
-        <img src="images/bridger.jpg" alt="BAJ community on the trail" style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3;">
-      </div>
-
-      <!-- Text + Button -->
-      <div>
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text);">
-          Show your BAJ pride with official apparel and gear. 
-          Every purchase helps support the community and future adventures.
-        </p>
-        <a href="https://bajnation-shop.fourthwall.com/" 
-           target="_blank" 
-           rel="noopener"
-           class="social-btn" 
-           style="background: var(--orange); border-color: var(--orange); display: inline-flex; color: white;">
+  <!-- Shop - Full width banner style -->
+  <section id="shop">
+    <div class="shop-banner">
+      <img src="images/baj-merch.jpg" alt="BAJ official merch and gear" loading="lazy">
+      <div class="shop-overlay">
+        <h2>BAJ Merch</h2>
+        <p>Official apparel and gear for the community. Every purchase helps support future adventures.</p>
+        <a href="https://bajnation-shop.fourthwall.com/" target="_blank" rel="noopener" class="shop-btn">
           Visit the BAJ Store
         </a>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Connect -->
   <section id="connect">
     <div class="container">
       <h2 class="section-title">Join the Community</h2>
@@ -537,7 +361,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <img src="images/logo.png" alt="BAJ" class="footer-logo">
     <p><strong>Backwoods Adventure Junkies, LLC</strong></p>
